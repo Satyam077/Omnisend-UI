@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Omnisend Client</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <app-root></app-root>
+  <!-- <script type="text/javascript">
+    window.omnisend = window.omnisend || [];
+    omnisend.push(["brandID", "690383e13efab2f815db41ea"]);
+    //omnisend.identifyContact({ email: "c59933290@gmail.com" });
+  //    omnisend.push(["identify", {
+  //   email: "c59933290@gmail.com"
+  // }]);
+  //   omnisend.push(["track", "started checkout"]);
+
+    omnisend.push(["track", "$pageViewed"]);
+    !function () {
+      var e = document.createElement("script");
+      e.type = "text/javascript", e.async = !0,
+        e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t)
+    }();
+
+    // function identifyContact(email, phone) {
+    //   if (window.omnisend) {
+    //     window.omnisend.push(['identify', { email, phone }]);
+    //   }
+    // }
+  </script> -->
+  <script type="text/javascript">
+        window.omnisend = window.omnisend || [];
+        omnisend.push(["brandID", "690383e13efab2f815db41ea"]);
+        omnisend.push(["track", "$pageViewed"]);
+        !function(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=!0,
+        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
+        var t=document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(e,t)}();
+</script>
+</body>
+
+</html>

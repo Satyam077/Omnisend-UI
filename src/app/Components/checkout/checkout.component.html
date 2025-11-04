@@ -1,0 +1,31 @@
+<!-- <p>checkout works!</p>
+<button mat-raised-button color="primary" (click)="sendCheckoutEvent()">
+  Proceed to Payment
+</button> -->
+<div class="checkout">
+  <h2>Checkout Page</h2>
+
+  <div class="cart">
+    <p>Product: <strong>{{productTitle}}</strong></p>
+    <p>Price: <strong>{{price | currency:'EUR'}}</strong></p>
+    <p *ngIf="discountApplied" class="discount">
+      🎉 20% discount applied! New price: {{ discountedPrice | currency:'EUR' }}
+    </p>
+  </div>
+
+  <button (click)="startCheckout()">Proceed to Checkout</button>
+
+  <!-- Discount popup -->
+  <div *ngIf="showPopup" class="overlay" (click)="closePopup()">
+    <div class="popup" (click)="$event.stopPropagation()">
+      <h3>Wait! Don’t leave yet 🎁</h3>
+      <p>Get <strong>20% OFF</strong> your order right now!</p>
+      <div class="buttons">
+        <button class="apply" (click)="applyDiscount()">Apply Offer</button>
+        <button class="cancel" (click)="closePopup()">No thanks</button>
+      </div>
+    </div>
+  </div>
+
+  <pre *ngIf="response">{{ customerResponse | json }}</pre>
+</div>
